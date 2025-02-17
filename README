@@ -1,3 +1,4 @@
+#Bandă procesată în stil Turing - folosind structuri fundamentale de date
 
 FUNCTII:
 OPERATIILE DE TIP UPDATE:
@@ -32,7 +33,7 @@ SHOW_CURRENT:
 -printez elementul ce se afla pe pozitia curenta.
 
 SHOW:
--atunci cand gasesc elemntul pe care este pozitionat degetul, il afisez intre '||', in restul cazurilor, afisez pur si simplu elememntele din banda.
+-atunci cand gasesc elementul pe care este pozitionat degetul, il afisez intre '||', in restul cazurilor, afisez pur si simplu elememntele din banda.
 
 STIVA:
 -am creat structurile si functiile specifice stivei;
