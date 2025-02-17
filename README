@@ -1,0 +1,47 @@
+
+FUNCTII:
+OPERATIILE DE TIP UPDATE:
+
+MOVE_LEFT:
+-daca sunt pozitionata cu degetul pe primul elemnt din banda, atunci nu se intampla nimic;
+-daca sunt pozitionata cu degetul in interiorul unei benzi mai mari, atunci mut degetul cu o pozitie la stanga;
+
+MOVE_RIGHT:
+-daca sunt pozitionata la sfarsitul listei, creez un nod si refac legaturile, ma mut cu degetul pe noua pozitie.
+-daca ma aflu in interiorul listei, ma mut cu o pozitie la dreapta.
+
+MOVE_LEFT_CHAR:
+-Am mai multe cazuri, daca elementul cautat se afla deja pe pozitia degetului, cazul in care se afla in stanga degetului(cand il gasesc ma mut pe aceasta pozitie, ma folosesc si de un contor ptr a vedea daca l-am gasit sau nu). Daca nu am gasit elementul cautat afisez ERROR;
+
+MOVE_RIGHT_CHAR:
+-Cazuri: elementul cautat se afla deja pe pozitia degetului. Parcurg banda, daca gases elementul cautat ma mut cu degetul pe aceasta pozitie. Abordez si cazul in care se afla fix pe ultima pozitie, dar si pe cel in care nu se afla in dreapta si atunci mai adaug un nod nou si ma mut cu degetul pe nodul nou inserat;
+
+WRITE:
+-Scriu valoarea elementului de pe pozitia curenta a degetului;
+
+INSERT_LEFT:
+-Daca sunt pe prima pozitie, afisez ERROR;
+-in celalalt caz, creez un nod, ii dau valoarea dorita si il adaug in banda;
+
+INSERT_RIGHT:
+-Abordez cazurile in care ma aflu pe ultima pozitie sau in interiorul benzii, in fiecare caz adaug un nod si refac legaturile specifice;
+
+OPERATIILE DE TIP QUERY:
+
+SHOW_CURRENT:
+-printez elementul ce se afla pe pozitia curenta.
+
+SHOW:
+-atunci cand gasesc elemntul pe care este pozitionat degetul, il afisez intre '||', in restul cazurilor, afisez pur si simplu elememntele din banda.
+
+STIVA:
+-am creat structurile si functiile specifice stivei;
+
+COADA:
+-am creat structurile si functiile specifice cozii;
+
+MAIN:
+-am creat o banda, am fisier de intrare si unul de iesire;
+-aici ma ocup de comanda EXECUTE, UNDO SI REDO;
+-parcurg fisierul, in functie de comenzile intalnite le execut pe cele de tip UPDATE, iar pe cele de tip MOVE le introduc intr-o stiva de UNDO, retinand o variabila catre pozitia curenta a degetului, de aceasta ma voi folosi si pentru REDO;
+
